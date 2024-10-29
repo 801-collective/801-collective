@@ -5,9 +5,27 @@
 
       <!-- Hero Section -->
       <section class="pt-32 pb-32 bg-gradient-to-b from-indigo-200 to-white">
-        <div class="mt-12 mb-12 h-80 w-80 mx-auto flex justify-center items-center absolute top-1/2 -translate-y-1/2 left-0 right-0">
-          <img class="h-fill w-auto" src="../public/images/iphone.png" alt="">
+
+        <!-- Carousel -->
+
+        <div class="relative h-64">
+          <div class="absolute inset-0">
+            <!-- <Swiper
+              :slides-per-view="1"
+              :space-between="50"
+              :autoplay="true"
+              :loop="true"
+              :pagination="{ clickable: true }"
+              :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }"
+            >
+              <SwiperSlide v-for="(image, index) in images" :key="index">
+                <img :src="image" class="w-full h-full object-cover" />
+              </SwiperSlide>
+            </Swiper> -->
+          </div>
         </div>
+
+
         <div class="shadow-md rounded-lg p-10 bg-white/50 backdrop-blur-sm w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center">
             <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -29,10 +47,11 @@
       </section>
 
       <!-- Features Section -->
+
       <section id="features" class="py-20 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 class="text-3xl font-bold text-center mb-16">Everything You Need to Succeed</h3>
-          <div class="grid md:grid-cols-3 gap-8">
+          <div v-animateonscroll="{ enterClass: 'animate-fadein', once: true }" class="grid md:grid-cols-3 gap-8">
             <div class="text-center p-6">
               <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,9 +83,10 @@
         </div>
       </section>
 
+
       <!-- Benefits Section -->
       <section id="benefits" class="py-20 bg-gradient-to-b from-gray-50 to-indigo-50 flex justify-center">
-        <div class="max-w-7xl sm:px-6 lg:px-8 bg-gray-900 text-white p-6 rounded-lg m-4">
+        <div v-animateonscroll="{ enterClass: 'animate-fadein' }" class="max-w-7xl sm:px-6 lg:px-8 bg-gray-900 text-white p-6 rounded-lg m-4">
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 class="text-3xl font-bold mb-6">Why Join 801 Collective?</h3>
@@ -123,7 +143,7 @@
       <section id="testimonials" class="py-20 bg-indigo-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 class="text-3xl font-bold text-center mb-16">Success Stories</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-animateonscroll="{ enterClass: 'animate-fadein', once: true }" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-md">
               <div class="flex items-center mb-4">
                 <div class="w-12 h-12 bg-indigo-100 rounded-full"></div>
@@ -158,5 +178,103 @@
         </div>
       </section>
 
+      <!-- Pricing Section -->
+      <section id="pricing" class="py-20 bg-gradient-to-b from-indigo-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl font-bold text-center mb-16">Pricing Plans</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold text-center mb-4">Starter</h4>
+              <p class="text-3xl font-bold text-center text-indigo-600 mb-4">$9.99/mo</p>
+              <ul class="space-y-4">
+                <li>Up to 10 products</li>
+                <li>Basic analytics</li>
+                <li>Email support</li>
+              </ul>
+              <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition mt-4">
+                Get Started
+              </button>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold text-center mb-4">Growth</h4>
+              <p class="text-3xl font-bold text-center text-indigo-600 mb-4">$19.99/mo</p>
+              <ul class="space-y-4">
+                <li>Up to 50 products</li>
+                <li>Advanced analytics</li>
+                <li>Priority support</li>
+              </ul>
+              <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition mt-4">
+                Get Started
+              </button>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold text-center mb-4">Pro</h4>
+              <p class="text-3xl font-bold text-center text-indigo-600 mb-4">$29.99/mo</p>
+              <ul class="space-y-4">
+                <li>Unlimited products</li>
+                <li>Premium analytics</li>
+                <li>24/7 support</li>
+              </ul>
+              <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition mt-4">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta" class="py-20 bg-gradient-to-b from-white to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">Ready to Grow Your Business?</h3>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join the 801 Collective marketplace and start reaching new customers today.
+            </p>
+            <button class="bg-indigo-600 text-white px-8 py-4 rounded-full text-lg hover:bg-indigo-700 transition">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
+
     </div>
 </template>
+
+<script setup>
+import AnimateOnScroll from 'primevue/animateonscroll';
+
+const images = [
+  '../images/iphone.png',
+  '../images/iphone.png',
+  '../images/iphone.png',
+  '../images/iphone.png',
+  '../images/iphone.png',
+];
+</script>
+<style>
+.animate-fadein {
+  animation: fadeIn 1s ease-in-out;
+}
+.animate-fadout{
+  animation: fadeOut 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+</style>

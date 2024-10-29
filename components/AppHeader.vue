@@ -8,9 +8,9 @@
         </NuxtLink>
         <div class="hidden md:block">
           <div class="flex items-center space-x-8">
-            <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
-            <a href="#benefits" class="text-gray-600 hover:text-indigo-600">Benefits</a>
-            <a href="#testimonials" class="text-gray-600 hover:text-indigo-600">Success Stories</a>
+            <NuxtLink to="/welcome#features" class="text-gray-600 hover:text-indigo-600">Features</NuxtLink>
+            <NuxtLink to="/welcome#benefits" class="text-gray-600 hover:text-indigo-600">Benefits</NuxtLink>
+            <NuxtLink to="/welcome#testimonials" class="text-gray-600 hover:text-indigo-600">Success Stories</NuxtLink>
             <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
               <NuxtLink to="/signup">Sign Up Now</NuxtLink>
             </button>

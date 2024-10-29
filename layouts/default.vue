@@ -16,6 +16,10 @@
     src: url('../public/fonts/sofia-pro/Sofia\ Pro\ Bold\ Az.otf');
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Sofia Pro Bold', sans-serif;
+}
+
 :root{
     --bkg-color: #333;
 }
